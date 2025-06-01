@@ -1,1 +1,0 @@
-<view> 123 <uv-qrcode wx:if="{{b}}" class="r" u-r="qrcode" u-i="20a51e92-0" bind:__l="__l" u-p="{{b}}"></uv-qrcode></view>

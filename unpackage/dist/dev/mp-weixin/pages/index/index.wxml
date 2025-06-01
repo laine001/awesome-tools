@@ -1,1 +1,0 @@
-<view class="home-page"><view class="nav-grid"><view wx:for="{{a}}" wx:for-item="tool" wx:key="c" class="nav-card" bindtap="{{tool.d}}"><view class="tool-icon">{{tool.a}}</view><view class="tool-detail"><text class="card-title">{{tool.b}}</text></view></view></view></view>
