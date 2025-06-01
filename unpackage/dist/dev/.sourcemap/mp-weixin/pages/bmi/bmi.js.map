@@ -1,1 +1,0 @@
-{"version":3,"file":"bmi.js","sources":["../../HBuilderX/plugins/uniapp-cli-vite/uniPage:/cGFnZXMvYm1pL2JtaS52dWU"],"sourcesContent":["import MiniProgramPage from 'E:/new-project/awesome-tools/pages/bmi/bmi.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;AACA,GAAG,WAAW,eAAe;"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"biaoqingba.js","sources":["../../HBuilderX/plugins/uniapp-cli-vite/uniPage:/cGFnZXMvYmlhb3FpbmdiYS9iaWFvcWluZ2JhLnZ1ZQ"],"sourcesContent":["import MiniProgramPage from 'E:/new-project/awesome-tools/pages/biaoqingba/biaoqingba.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;AACA,GAAG,WAAW,eAAe;"}

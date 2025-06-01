@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "",
-  "usingComponents": {
-    "uv-qrcode": "../../uni_modules/uv-qrcode/components/uv-qrcode/uv-qrcode"
-  }
-}
