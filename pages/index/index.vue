@@ -33,6 +33,11 @@
 			icon: '🍔',
 		},
 		// {
+		// 	name: '九宫格图片',
+		// 	path: '/pages/img-split/img-split',
+		// 	icon: '🍔',
+		// },
+		// {
 		// 	name: '官方表情包',
 		// 	path: '/pages/biaoqingbao/biaoqingbao',
 		// 	icon: '🎨',

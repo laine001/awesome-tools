@@ -41,6 +41,13 @@
 			{
 				"navigationBarTitleText" : "今天吃啥呀"
 			}
+		},
+		{
+			"path" : "pages/img-split/img-split",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 	],
 	"globalStyle": {
