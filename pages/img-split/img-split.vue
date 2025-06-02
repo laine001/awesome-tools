@@ -16,7 +16,7 @@
           <view class="upload-icon">
             <text class="fa fa-cloud-upload"></text>
           </view>
-          <text class="upload-text">点击或拖拽图片到此处</text>
+          <text class="upload-text">点击选择图片</text>
           <text class="upload-hint">支持JPG、PNG</text>
         </view>
 
@@ -112,14 +112,14 @@
                 mode="aspectFill"
                 class="result-image"
               ></image>
-              <button
+              <!-- <button
                 type="primary"
                 size="mini"
                 class="download-btn"
                 @click="downloadImage(image, index + 1)"
               >
-                <text class="fa fa-download"></text>
-              </button>
+                <text class="fa fa-download">↓</text>
+              </button> -->
             </view>
             <text class="result-text">分割图片 {{ index + 1 }}</text>
           </view>
@@ -433,7 +433,7 @@ const downloadAllImages = async () => {
 /* 上传区域 */
 .upload-section {
   background-color: white;
-  border-radius: 16rpx;
+  border-radius: 24rpx;
   padding: 30rpx;
   margin-bottom: 30rpx;
   box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
@@ -441,7 +441,7 @@ const downloadAllImages = async () => {
 
 .upload-container {
   border: 2rpx dashed #ddd;
-  border-radius: 12rpx;
+  border-radius: 24rpx;
   padding: 60rpx 20rpx;
   text-align: center;
   transition: all 0.3s;
@@ -476,33 +476,33 @@ const downloadAllImages = async () => {
 
 .selected-image {
   width: 100%;
-  border-radius: 12rpx;
-  margin-top: 20rpx;
+  border-radius: 24rpx;
   border-radius: 4rpx;
 }
 
 .change-image-btn {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  right: 15rpx;
+  right: 15rpx; */
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
   border: none;
   backdrop-filter: blur(5rpx);
+  border-radius: 12rpx;
 }
 
 /* 选项区域 */
 .option-section {
   background-color: white;
-  border-radius: 16rpx;
+  border-radius: 24rpx;
   padding: 30rpx;
   margin-bottom: 30rpx;
   box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
 }
 
 .option-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  /* grid-template-columns: 1fr; */
   gap: 20rpx;
 }
 
@@ -514,13 +514,13 @@ const downloadAllImages = async () => {
 
 .option-card {
   border: 2rpx solid #ddd;
-  border-radius: 12rpx;
+  border-radius: 24rpx;
   padding: 25rpx;
   transition: all 0.3s;
 }
 
 .option-card.active {
-  border-color: #3b82f6;
+  border-color: #3781f7;
   background-color: rgba(59, 130, 246, 0.05);
 }
 
@@ -540,7 +540,7 @@ const downloadAllImages = async () => {
   width: 50rpx;
   height: 50rpx;
   background-color: rgba(59, 130, 246, 0.1);
-  border-radius: 50%;
+  border-radius: 16rpx;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -557,6 +557,7 @@ const downloadAllImages = async () => {
 .option-preview {
   display: grid;
   gap: 5rpx;
+  margin-top: 12rpx;
 }
 
 .grid-2x2 {
@@ -571,12 +572,12 @@ const downloadAllImages = async () => {
 
 .grid-item {
   background-color: #f5f5f5;
-  border-radius: 5rpx;
+  border-radius: 16rpx;
   height: 25rpx;
 }
 
 .split-btn {
-  color: #333;
+  color: #333 !important;
   margin-top: 30rpx;
   height: 90rpx;
   line-height: 90rpx;
@@ -584,12 +585,13 @@ const downloadAllImages = async () => {
   background: linear-gradient(90deg, #3b82f6, #00ff7f);
   border: none;
   box-shadow: 0 4rpx 15rpx rgba(59, 130, 246, 0.2);
+  border-radius: 24rpx;
 }
 
 /* 结果区域 */
 .result-section {
   background-color: white;
-  border-radius: 16rpx;
+  border-radius: 24rpx;
   padding: 30rpx;
   margin-bottom: 30rpx;
   box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
@@ -607,13 +609,15 @@ const downloadAllImages = async () => {
 
 .result-image-container {
   position: relative;
-  border-radius: 12rpx;
+  border-radius: 24rpx;
   overflow: hidden;
   margin-bottom: 10rpx;
 }
 
 .result-image {
-  width: 100%;
+  /* width: 100%; */
+  width: 300rpx;
+  height: 300rpx;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 12rpx;
@@ -631,8 +635,9 @@ const downloadAllImages = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 24rpx;
   backdrop-filter: blur(5rpx);
+  display: none;
 }
 
 .result-text {
@@ -643,18 +648,28 @@ const downloadAllImages = async () => {
 .download-all-btn {
   margin-top: 30rpx;
   height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 24rpx;
   font-size: 32rpx;
   background-color: #3b82f6;
   border: none;
 }
 
 /* 按钮样式 */
-button {
+/* button {
   border-radius: 50rpx;
   font-weight: normal;
-}
+} */
 
 button::after {
   border: none;
+}
+
+#imageCanvas {
+  position: fixed;
+  top: -9999px;
+  bottom: -9999px;
+  opacity: 0;
+  z-index: -999;
 }
 </style>
