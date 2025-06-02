@@ -1,6 +1,6 @@
 <template>
 	<view class="emoji-container">
-		<input type="text" class="emoji-search" v-model="searchQuery" />
+		<input type="text" placeholder="可搜索，亦可点击复制" class="emoji-search" v-model="searchQuery" />
 
 		<!-- 分组展示 -->
 		<view v-for="(group, index) in filteredGroups" :key="index" class="group">
@@ -72,15 +72,15 @@
 	.emoji-search {
 		position: fixed;
 		top: 0;
-		left: 11px;
+		left: 12px;
 		right: 12px;
-		border: 1rpx solid #999;
+		border: 1rpx solid #dedede;
 		padding: 8px;
-		border-radius: 6px;
+		border-radius: 12px;
 		margin-bottom: 14px;
 		margin-top: 14px;
 		z-index: 1;
-		background-color: rgba(255, 255, 255, 0.8);
+		background-color: rgba(255, 255, 255, 0.78);
 		backdrop-filter: blur(6px);
 	}
 
@@ -100,7 +100,8 @@
 		font-size: 1.1rem;
 		margin-bottom: 1rem;
 		padding-left: 0.5rem;
-		border-left: 4px solid green;
+		border-left: 4px solid #52c41a;
+		border-radius: 4px;
 	}
 
 	.emoji-grid {
@@ -114,7 +115,7 @@
 		cursor: pointer;
 		text-align: center;
 		padding: 0.5rem;
-		border-radius: 8px;
+		border-radius: 12px;
 		transition: all 0.2s;
 		background: #dedede;
 	}
@@ -160,7 +161,7 @@
 	}
 	
 	.highlight-border {
-	  border: 2px solid #06aa06;
+	  border: 2px solid #52c41a;
 	  box-shadow: 0 2px 6px rgba(255, 68, 68, 0.2);
 	}
 

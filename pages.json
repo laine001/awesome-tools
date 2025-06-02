@@ -34,6 +34,13 @@
 			{
 				"navigationBarTitleText" : "官方表情包"
 			}
+		},
+		{
+			"path" : "pages/eat-what/eat-what",
+			"style" : 
+			{
+				"navigationBarTitleText" : "今天吃啥呀"
+			}
 		}
 	],
 	"globalStyle": {

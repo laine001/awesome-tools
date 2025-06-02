@@ -13,37 +13,47 @@
 </template>
 
 <script setup>
+	import { onLoad } from '@dcloudio/uni-app'
+	
 	const tools = [
 		{
 			name: 'BMI计算',
 			icon:'🙎‍',
 			path: '/pages/bmi/bmi'
 		},
-		// {
-		// 	name: '单位转换',
-		// 	path: '/pages/unit-converter/index'
-		// },
-		// {
-		// 	name: '时间工具',
-		// 	path: '/pages/time-utils/index'
-		// },
-		// {
-		// 	name: '加密解密',
-		// 	path: '/pages/encrypt-decrypt/index'
-		// },
 		{
 			name: 'Emoji大全',
 			path: '/pages/emoji/emoji',
-			icon:'🎨',
+			icon: '😀',
 			desc: '超全emoji表情，可复制'
 		},
 		{
-			name: '官方表情包',
-			path: '/pages/biaoqingbao/biaoqingbao',
-			icon:'😀',
-			desc: '超全emoji表情，可复制'
-		}
+			name: '吃啥呀',
+			path: '/pages/eat-what/eat-what',
+			icon: '🍔',
+		},
+		// {
+		// 	name: '官方表情包',
+		// 	path: '/pages/biaoqingbao/biaoqingbao',
+		// 	icon: '🎨',
+		// 	desc: '超全emoji表情，可复制'
+		// },
+		// {
+		// 	name: '颜文字',
+		// 	path: '/pages/biaoqingbao/biaoqingbao',
+		// 	icon: '🎨',
+		// 	desc: '超全emoji表情，可复制'
+		// }
 	]
+	onLoad(() => {
+		const res = uni.getSystemInfoSync()
+		if (res.theme === 'dark') {
+			uni.setNavigationBarColor({
+				backgroundColor: '#1a202c',
+				frontColor:'#ffffff',
+			})
+		}
+	})
 	const navigateToTool = (path) => {
 		uni.navigateTo({
 			url: path
@@ -73,6 +83,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		gap: 4px;
 		background: rgba(255, 255, 255, 0.95);
 		border: 2rpx solid rgba(0, 0, 0, 0.05);
 		border-radius: 16px;
