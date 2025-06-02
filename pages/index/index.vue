@@ -35,7 +35,7 @@
 		{
 			name: '九宫格图片',
 			path: '/pages/img-split/img-split',
-			icon: '🍔',
+			icon: '🤳',
 		},
 		// {
 		// 	name: '官方表情包',
