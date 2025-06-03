@@ -37,18 +37,18 @@
 			path: '/pages/img-split/img-split',
 			icon: '🤳',
 		},
-		// {
-		// 	name: '官方表情包',
-		// 	path: '/pages/biaoqingbao/biaoqingbao',
-		// 	icon: '🎨',
-		// 	desc: '超全emoji表情，可复制'
-		// },
-		// {
-		// 	name: '颜文字',
-		// 	path: '/pages/biaoqingbao/biaoqingbao',
-		// 	icon: '🎨',
-		// 	desc: '超全emoji表情，可复制'
-		// }
+		{
+			name: '石头剪刀布',
+			path: '/pages/guessing/guessing',
+			icon: '✊',
+			desc: '超全emoji表情，可复制'
+		},
+		{
+			name: '随机数生成',
+			path: '/pages/random-num/random-num',
+			icon: '🔢',
+			desc: '超全emoji表情，可复制'
+		}
 	]
 	onLoad(() => {
 		const res = uni.getSystemInfoSync()

@@ -48,6 +48,20 @@
 			{
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "pages/random-num/random-num",
+			"style" : 
+			{
+				"navigationBarTitleText" : "随机数生成"
+			}
+		},
+		{
+			"path" : "pages/guessing/guessing",
+			"style" : 
+			{
+				"navigationBarTitleText" : "猜拳"
+			}
 		}
 	],
 	"globalStyle": {
